@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NODO - Plataforma Corporativa
 
-## Getting Started
+Sitio web corporativo de NODO SRL, empresa líder en soluciones tecnológicas, IoT y desarrollo de software en República Dominicana.
 
-First, run the development server:
+## 🚀 Estructura del Proyecto
+
+Este proyecto está construido con **Next.js 15**, **React 19**, **TypeScript**, **Tailwind CSS** y **Shadcn/UI**.
+
+### Páginas Principales
+
+- **`/`** - Página corporativa de NODO (matriz)
+- **`/gps`** - NODO GPS - Comercialización de equipos de rastreo satelital
+- **`/ruteame`** - NODO Ruteame - Plataforma SaaS de gestión de flotas
+
+## 🛠️ Tecnologías
+
+- **Framework**: Next.js 15.1.0 (App Router)
+- **React**: 19.0.0
+- **TypeScript**: ^5
+- **Styling**: Tailwind CSS 3.4.1
+- **UI Components**: Shadcn/UI
+- **Icons**: Lucide React
+- **Animations**: Tailwind CSS Animate
+
+## 📦 Instalación
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Construir para producción
+npm run build
+
+# Iniciar en producción
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Estructura de Rutas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+/                    → Página corporativa NODO
+/gps                 → NODO GPS (Equipos de rastreo)
+/ruteame             → NODO Ruteame (Gestión de flotas)
+/contacto            → Página de contacto (pendiente)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Componentes Principales
 
-## Learn More
+### Layout Global
+- **`SiteHeader`** - Navegación principal con mega menú
+- **`SiteFooter`** - Footer global con enlaces y redes sociales
 
-To learn more about Next.js, take a look at the following resources:
+### Páginas
+- **`app/page.tsx`** - Homepage corporativa NODO
+- **`app/gps/page.tsx`** - Landing page NODO GPS
+- **`app/ruteame/page.tsx`** - Landing page NODO Ruteame
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### UI Components (Shadcn/UI)
+- Badge
+- Button
+- Card
+- Navigation Menu
+- Dialog
+- Input
+- Sheet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 Características
 
-## Deploy on Vercel
+- ✅ Diseño responsive y mobile-first
+- ✅ Navegación dinámica con mega menú
+- ✅ Temas oscuros en páginas específicas
+- ✅ Optimización de imágenes con Next.js Image
+- ✅ SEO optimizado
+- ✅ Componentes reutilizables
+- ✅ TypeScript para type safety
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🖼️ Assets
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Los logos y recursos visuales se encuentran en:
+- `public/images/` - Logos optimizados (SVG)
+- `public/SVG/` - Archivos SVG originales
+
+### Logos Disponibles
+- `nodo-logo.svg` - Logo corporativo NODO
+- `nodo-gps-black.svg` / `nodo-gps-white.svg` - Logo NODO GPS
+- `nodo-ruteame-black.svg` / `nodo-ruteame-white.svg` - Logo NODO Ruteame
+
+## 🚀 Despliegue
+
+Este proyecto está optimizado para despliegue en:
+- **Vercel** (recomendado)
+- **Netlify**
+- **AWS Amplify**
+- Cualquier plataforma que soporte Next.js
+
+### Variables de Entorno
+
+Crear un archivo `.env.local`:
+
+```env
+# Agregar variables según sea necesario
+NEXT_PUBLIC_SITE_URL=https://nodo.do
+```
+
+## 📝 Próximos Pasos
+
+- [ ] Implementar página de contacto
+- [ ] Agregar formularios de cotización
+- [ ] Integrar CMS para contenido dinámico
+- [ ] Implementar blog/noticias
+- [ ] Agregar analytics (Google Analytics/Plausible)
+- [ ] Optimizar SEO con metadata dinámica
+- [ ] Implementar sitemap.xml
+- [ ] Agregar tests (Jest/Playwright)
+
+## 👥 Equipo
+
+**NODO SRL** - Soluciones Tecnológicas Integrales
+
+- 📍 Santo Domingo, República Dominicana
+- 📞 809-362-7085
+- 📧 info@nodo.do
+- 🌐 [nodo.do](https://nodo.do)
+
+## 📄 Licencia
+
+© 2025 NODO SRL. Todos los derechos reservados.
