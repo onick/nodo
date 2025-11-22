@@ -38,7 +38,7 @@ export default function NodoPage() {
                             <Button size="lg" className="h-14 px-8 text-lg bg-blue-600 hover:bg-blue-700" asChild>
                                 <Link href="/contacto">Contáctanos</Link>
                             </Button>
-                            <Button variant="outline" size="lg" className="h-14 px-8 text-lg border-white text-white hover:bg-white hover:text-slate-900" asChild>
+                            <Button variant="outline" size="lg" className="h-14 px-8 text-lg bg-transparent border-white text-white hover:bg-white hover:text-slate-900" asChild>
                                 <Link href="/gps">Ver Productos</Link>
                             </Button>
                         </div>
