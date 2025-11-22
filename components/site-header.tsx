@@ -14,7 +14,14 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
-import { ShoppingCart, Menu, Truck, Smartphone, Map } from "lucide-react"
+import {
+    Sheet,
+    SheetContent,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
+import { ShoppingCart, Menu, Truck, Smartphone, Map, X } from "lucide-react"
 
 export function SiteHeader() {
     const pathname = usePathname()
@@ -22,6 +29,7 @@ export function SiteHeader() {
     const isCorporate = pathname === "/"
     const isDarkHeader = isRuteame || isCorporate
     const [mounted, setMounted] = React.useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
     React.useEffect(() => {
         setMounted(true)
@@ -131,9 +139,85 @@ export function SiteHeader() {
                     <Button variant="ghost" size="icon" className={cn(isDarkHeader && "text-white hover:bg-slate-800 hover:text-white")}>
                         <ShoppingCart className="h-5 w-5" />
                     </Button>
-                    <Button variant="ghost" size="icon" className={cn("md:hidden", isDarkHeader && "text-white hover:bg-slate-800 hover:text-white")}>
-                        <Menu className="h-5 w-5" />
-                    </Button>
+
+                    {/* Mobile Menu */}
+                    <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+                        <SheetTrigger asChild>
+                            <Button variant="ghost" size="icon" className={cn("md:hidden", isDarkHeader && "text-white hover:bg-slate-800 hover:text-white")}>
+                                <Menu className="h-5 w-5" />
+                            </Button>
+                        </SheetTrigger>
+                        <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                            <SheetHeader>
+                                <SheetTitle>Menú</SheetTitle>
+                            </SheetHeader>
+                            <nav className="flex flex-col gap-4 mt-8">
+                                {/* Productos y Soluciones */}
+                                <div className="space-y-3">
+                                    <h3 className="font-semibold text-lg">Productos y Soluciones</h3>
+                                    <Link
+                                        href="/ruteame"
+                                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 transition-colors"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        <Truck className="h-5 w-5 text-primary" />
+                                        <div>
+                                            <div className="font-medium">Plataforma Ruteame</div>
+                                            <div className="text-sm text-muted-foreground">Gestión de flotas</div>
+                                        </div>
+                                    </Link>
+                                    <Link
+                                        href="/gps"
+                                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 transition-colors"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        <Truck className="h-5 w-5 text-primary" />
+                                        <div>
+                                            <div className="font-medium">NODO GPS</div>
+                                            <div className="text-sm text-muted-foreground">Rastreo satelital</div>
+                                        </div>
+                                    </Link>
+                                    <Link
+                                        href="/ruteame"
+                                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 transition-colors"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        <Smartphone className="h-5 w-5 text-primary" />
+                                        <div>
+                                            <div className="font-medium">App Móvil</div>
+                                            <div className="text-sm text-muted-foreground">Monitoreo desde tu celular</div>
+                                        </div>
+                                    </Link>
+                                </div>
+
+                                {/* Divider */}
+                                <div className="border-t my-2"></div>
+
+                                {/* Main Links */}
+                                <Link
+                                    href="/"
+                                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 transition-colors font-medium"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Inicio
+                                </Link>
+                                <Link
+                                    href="/gps"
+                                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 transition-colors font-medium"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Tienda
+                                </Link>
+                                <Link
+                                    href="/contacto"
+                                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 transition-colors font-medium"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Contacto
+                                </Link>
+                            </nav>
+                        </SheetContent>
+                    </Sheet>
                 </div>
             </div>
         </header>

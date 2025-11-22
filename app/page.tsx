@@ -21,10 +21,6 @@ export default function NodoPage() {
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
                     <div className="flex flex-col items-center text-center space-y-8">
-                        <Badge variant="secondary" className="px-4 py-2 text-sm bg-blue-500/10 text-blue-400 border-blue-500/20">
-                            NODO SRL
-                        </Badge>
-
                         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl">
                             Soluciones Tecnológicas <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Integrales e Innovadoras</span>
