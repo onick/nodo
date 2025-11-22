@@ -162,7 +162,7 @@ export function SiteHeader() {
                                     >
                                         <Truck className="h-5 w-5 text-primary" />
                                         <div>
-                                            <div className="font-medium">Plataforma Ruteame</div>
+                                            <div className="font-medium">NODO | Ruteame</div>
                                             <div className="text-sm text-muted-foreground">Gestión de flotas</div>
                                         </div>
                                     </Link>
