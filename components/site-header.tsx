@@ -173,7 +173,7 @@ export function SiteHeader() {
                                     >
                                         <Truck className="h-5 w-5 text-primary" />
                                         <div>
-                                            <div className="font-medium">NODO GPS</div>
+                                            <div className="font-medium">NODO | GPS</div>
                                             <div className="text-sm text-muted-foreground">Rastreo satelital</div>
                                         </div>
                                     </Link>
